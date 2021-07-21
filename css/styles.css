@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.pokemon-list{
+	position: absolute;
+  	box-sizing: border-box;
+  	height: 100%;
+}
+
+.bannerClass{
+	text-align: center;
+  	box-sizing: border-box;
+}
+
+.modal-close{
+	position: fixed;
+	top: 0px;
+}
+
+.pokeImgStyle{
+	
+	border: solid;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+li{
+	width: 400px;
+	right: 100px;
+}
+
+#listDiv{
+	position: relative;
+  	box-sizing: border-box;
+	
+	width: 400px;
+  	top: 100px;
+  	left: 40%;
+  	height: 100%;
+}
+
+#show-modal{
+	position: fixed;
+	right: 0px;
+	top: 50px;
+}
+
+
+#modal-container {
+	position: fixed;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
+	border-radius: 6px;
+	background-color: #CFCFCF;
+	border-style: ridge;
+  	border-width: 3px;
+  	border-color:cornflowerblue;
+	padding: 10px;
+}
+
+#modal-container img{
+	float: right;
+	width: 50%;
+}
+
+
+.butStyle{
+	border-radiius: 10px;
+	/*font-family: 'Roboto';
+	color: #fff;
+	padding-bottom: 8px;
+	background-color: cadetblue;*/
+	height: 80px;
+	width: 50%;
+}
+
+.butStyle:hover{
+	background-color: #7C5EA4;
+}
+
+li{
+	list-style: none;
+}
+
+h2:first-child{
+	font-size: 1.3em;
+	transition: all .2s ease-in-out;
+}
+
+h2:first-child:hover{
+	transform: scale(1.1);
+}
+
+button{
+	padding: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/**********************/
+
+#pokemonInfo{
+	position: fixed;
+	right: 50px;
+	top: 10px;
+	width: 20%;
+	
+}
+
+#pokeImg{
+	border: solid;
+	position:fixed;
+	top: 50px;
+	right: 50px;
+}
+
+#navbarNav{
+	justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px){
+	#pokeImg{
+	border: solid;
+	position:fixed;
+	top: 300px;
+	left: 50px;
+}
+	
+	@media only screen and (min-width:500px)
+   {
+	   button{
+		   padding: 0px;
+	   }
+	   h2:first-child{
+		   font-size: 1.1em;
+	   }
+	   
+   }
+}
