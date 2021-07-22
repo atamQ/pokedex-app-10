@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = []; //repository to house pokemon items
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=1";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
 
 	let searchItem = document.querySelector("#searchPoke");   //var for the search field
 	
