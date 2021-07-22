@@ -76,7 +76,7 @@ function loadList() {
         add(pokemon);
       });
     }).catch(function (e) {
-      console.error(e);
+      console.log(e);
     })
   }
 
@@ -137,7 +137,7 @@ function loadList() {
         item.weight = details.weight;
       })
       .catch(function (e) {
-        console.error(e);
+        console.log(e);
       });
   }
   // show the modal content
