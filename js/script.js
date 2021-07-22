@@ -25,7 +25,7 @@ let pokemonRepository = (function () {
 	
   function addListItem(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
-      let $row = jQuery(".row");
+      let $row = $(".row");
 
       let $card = $('<div class="card" style="width:400px"></div>');
       let $image = $(
