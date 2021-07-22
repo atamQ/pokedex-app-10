@@ -125,6 +125,10 @@ button{
 	justify-content: space-around;
 }
 
+.navLogo{
+	height: 40px;
+}
+
 @media only screen and (max-width: 1000px){
 	#pokeImg{
 	border: solid;

@@ -1,6 +1,10 @@
 let pokemonRepository = (function () {
-  let pokemonList = []; //repository
+  let pokemonList = []; //repository to house pokemon items
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
+
+	let searchItem = document.querySelector("#searchPoke");   //var for the search field
+	
+	//function pushes pokemon item to array
   function add(pokemon) {
     if (
       typeof pokemon === "object" &&
@@ -12,18 +16,22 @@ let pokemonRepository = (function () {
       console.log("add object");
     }
   }
+	
+	//function displays pokemon in list
   function getAll() {
     return pokemonList;
   }
+	
+	
   function addListItem(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
       let $row = $(".row");
 
       let $card = $('<div class="card" style="width:400px"></div>');
       let $image = $(
-        '<img class="card-img-top" alt="Card image" style="width:20%" />'
+        '<img class="card-img-top" alt="Card image" style="width:20%" />'  //add html to build img element
       );
-      $image.attr("src", pokemon.imageUrlFront);
+      $image.attr("src", pokemon.imageUrlFront);		//set source attr to display correct image
 		
 	pokemon.name = uCase(pokemon.name);
       let $cardBody = $('<div class="card-body"></div>');
@@ -44,6 +52,8 @@ let pokemonRepository = (function () {
       });
     });
   }
+	
+	
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function () {
       console.log(item);

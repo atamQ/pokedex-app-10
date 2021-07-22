@@ -4,16 +4,17 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	 crossorigin="anonymous" />
 
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />
-	<title>Pokemon App</title>
+	<title>Pokemon App 10</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  		<a class="navbar-brand" href="#">Pokedex</a>
+  		<a class="navbar-brand" href="#"><img src="img/pokeLogo.gif" class="navLogo" alt="Pokemon Logo"></a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
   		</button>
@@ -30,6 +31,11 @@
 			  </li>
 			</ul>
 		</div>
+		
+		<form class="form-inline">
+			<input class="formClass" id="searchPoke" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success" type="submit">Search</button>
+		</form>
 	</nav>
 	
 	<div class="bannerClass"><h1>POKEMON LIST</h1></div>
@@ -62,11 +68,7 @@
     <div id="listDiv" class="row">			<!--DIV TO LOAD POKEMON OBJECTS-->
       
     </div>
-	<script>
-		if(window.innerWidth < 992){
-			
-		}
-	</script>
+	
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -82,7 +84,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <!-- <div id="modal-container"> -->
+    <!-- Polyfills -->
     <script src="js/promise-polyfill.js"></script>
     <script src="js/script.js"></script>
     <!-- </div> -->
