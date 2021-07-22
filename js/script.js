@@ -82,8 +82,9 @@ function loadList() {
 
   function loadDetails(item) {
     let url = item.detailsUrl;
-    return $.ajax(url)
-      .then(function (details) {
+    return fetch(url).then(function (response) {
+      return response.json();
+    }).then(function (details) {
         //add the details
         item.imageUrlFront = details.sprites.front_default;
         item.imageUrlBack = details.sprites.back_default;
