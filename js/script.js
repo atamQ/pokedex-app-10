@@ -61,6 +61,7 @@ let pokemonRepository = (function () {
     });
   }
   function loadList() {
+	  /*
     return $.ajax(apiUrl)
       .then(function (json) {
         json.results.forEach(function (item) {
@@ -74,7 +75,25 @@ let pokemonRepository = (function () {
       })
       .catch(function (e) {
         console.log(e);
-      });
+      });*/
+	  
+	  showLoadingMessage();
+	  return fetch('https://pokeapi.co/api/v2/pokemon/').then(function(response){
+		  //JSON formatting
+		  return.response.json();
+	  }).then(function(data){
+		  hideLoadingMessage();
+		  data.results.forEach(function(item){
+			  const pokemon = {
+				  name: capitalize(item.name),
+				  detailsUrl: item.url
+			  }
+		  })
+	  })
+	  }
+	  
+	  
+	  
   }
 
   function loadDetails(item) {
