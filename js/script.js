@@ -61,7 +61,7 @@ let pokemonRepository = (function () {
     });
   }
   function loadList() {
-	  /*
+	  
     return $.ajax(apiUrl)
       .then(function (json) {
         json.results.forEach(function (item) {
@@ -75,8 +75,8 @@ let pokemonRepository = (function () {
       })
       .catch(function (e) {
         console.log(e);
-      });*/
-	  
+      });
+	  /*
 	  showLoadingMessage();
 	  return fetch('https://pokeapi.co/api/v2/pokemon/').then(function(response){
 		  //JSON formatting
@@ -92,7 +92,7 @@ let pokemonRepository = (function () {
 	  })
 	  }
 	  
-	  
+	  */
 	  
   }
 
